@@ -3,6 +3,7 @@
 	<name>WebGiorno1</name>
 	<comment></comment>
 	<projects>
+		<project>DatabaseGiono2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

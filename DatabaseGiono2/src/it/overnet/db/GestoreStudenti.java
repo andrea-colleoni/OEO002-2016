@@ -1,3 +1,4 @@
+package it.overnet.db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -6,9 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProgrammaDB {
+public class GestoreStudenti {
 
-	public static void main(String[] args) {
+	public static List<Studente> tutti() {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			Connection conn = DriverManager.getConnection("jdbc:sqlserver://192.168.18.103;database=OEO002", "sa", "password");
@@ -27,6 +28,7 @@ public class ProgrammaDB {
 				
 				studenti.add(s);
 			}
+			return studenti;
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -34,7 +36,7 @@ public class ProgrammaDB {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		return null;
 	}
 
 }

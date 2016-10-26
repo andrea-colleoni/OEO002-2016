@@ -1,3 +1,4 @@
+package it.overnet.db;
 import java.util.Date;
 
 public class Studente {
