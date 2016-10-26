@@ -21,7 +21,7 @@ public class ProgrammaDB {
 				s.setNome(rs.getString("nome"));
 				s.setCognome(rs.getString("cognome"));
 				s.setDataNascita(rs.getDate("dataNascita"));
-				s.setAletzzaInCm(rs.getInt("altezzaInCm"));
+				s.setAltezzaInCm(rs.getInt("altezzaInCm"));
 				s.setPesoInKg(rs.getFloat("pesoInKg"));
 				s.setMatricola(rs.getInt("matricola"));
 				

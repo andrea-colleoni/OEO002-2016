@@ -5,7 +5,7 @@ public class Studente {
 	String nome;
 	String cognome;
 	Date dataNascita;
-	int aletzzaInCm;
+	int altezzaInCm;
 	float pesoInKg;
 	int matricola;
 	
@@ -33,11 +33,11 @@ public class Studente {
 	public void setDataNascita(Date dataNascita) {
 		this.dataNascita = dataNascita;
 	}
-	public int getAletzzaInCm() {
-		return aletzzaInCm;
+	public int getAltezzaInCm() {
+		return altezzaInCm;
 	}
-	public void setAletzzaInCm(int aletzzaInCm) {
-		this.aletzzaInCm = aletzzaInCm;
+	public void setAltezzaInCm(int aletzzaInCm) {
+		this.altezzaInCm = aletzzaInCm;
 	}
 	public float getPesoInKg() {
 		return pesoInKg;
