@@ -11,6 +11,18 @@
        		<property name="studenteDao" ref="studenteDao" />
        </bean>
        
+       <bean name="/nuovoStudente.htm" class="it.overnet.app.NuovoStudenteController">
+       		<property name="studenteDao" ref="studenteDao" />
+       </bean>    
+       
+       <bean name="/modificaStudente.htm" class="it.overnet.app.ModificaStudenteController">
+       		<property name="studenteDao" ref="studenteDao" />
+       </bean> 
+          
+       <bean name="/eliminaStudente.htm" class="it.overnet.app.EliminaStudenteController">
+       		<property name="studenteDao" ref="studenteDao" />
+       </bean>             
+       
        <bean name="studenteDao" class="it.overnet.db.StudenteDao" 
        		scope="singleton"/>
 </beans>

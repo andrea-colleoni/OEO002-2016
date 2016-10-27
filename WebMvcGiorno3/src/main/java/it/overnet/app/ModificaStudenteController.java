@@ -8,15 +8,13 @@ import org.springframework.web.servlet.mvc.Controller;
 
 import it.overnet.db.StudenteDao;
 
-public class ElencoStudentiController implements Controller {
-
-	StudenteDao studenteDao;
+public class ModificaStudenteController implements Controller {
 	
+	StudenteDao studenteDao;
+
 	public ModelAndView handleRequest(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("elenco", studenteDao.tutti());
-		mv.setViewName("elencoStudenti.jsp");
-		return mv;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public StudenteDao getStudenteDao() {
@@ -26,4 +24,5 @@ public class ElencoStudentiController implements Controller {
 	public void setStudenteDao(StudenteDao studenteDao) {
 		this.studenteDao = studenteDao;
 	}
+
 }
