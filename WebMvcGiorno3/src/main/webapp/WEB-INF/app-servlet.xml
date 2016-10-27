@@ -6,4 +6,11 @@
        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
        
        <bean name="/hello.htm" class="it.overnet.app.HelloController" />
+       
+       <bean name="/elencoStudenti.htm" class="it.overnet.app.ElencoStudentiController">
+       		<property name="studenteDao" ref="studenteDao" />
+       </bean>
+       
+       <bean name="studenteDao" class="it.overnet.db.StudenteDao" 
+       		scope="singleton"/>
 </beans>
