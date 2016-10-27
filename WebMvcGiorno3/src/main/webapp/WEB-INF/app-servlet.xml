@@ -7,10 +7,22 @@
        
        <bean name="/hello.htm" class="it.overnet.app.HelloController" />
        
-       <bean name="/elencoStudenti.htm" class="it.overnet.app.ElencoStudentiController">
+       <bean name="/elencoStudenti.htm" class="it.overnet.app.ElencoStudentiController"> <!-- Ogni qualvolta viene richiesta la risorsa elencoStudenti.htm
+       il framework spring contatta la classe (controller) ElencoStudentiController
+       la quale per costruire la vista che restituisce a monito richiama la JSP elencoStudenti.jsp
+       Per ottnere l'elenco studenti dal db il controller ha bisogno di accedere al db tramite il DAO. Invece che istanziare il DAO, se lo fa istanziare (fabbricare) da SPRING
+       La property studenteDao (che è un oggetto POJO) viene 
+       valorizzata (viene creata la classe studenteDao) con il singleton disponibile nel container spring
+       Questo modo di istanziare gli oggetti è il pattern DependencyInjection (il buon funzionamento dell'elencoStudentiController dipende da studenteDao, spring prende lo studenteDao, prende
+       stundenteController e crea la dipendenza.
+       InversionofControl (Ioc) non sono io controller che ho bisogno di studenteDao, sei tu spring che mi inietti lo studente dao così che quando ne avrò bisogno so già utilizzarlo
+        -->
        		<property name="studenteDao" ref="studenteDao" />
+       		<property name="pippo" value="Ciaoooooooo" />
+       		
        </bean>
        
        <bean name="studenteDao" class="it.overnet.db.StudenteDao" 
        		scope="singleton"/>
+       		
 </beans>
