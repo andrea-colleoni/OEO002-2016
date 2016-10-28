@@ -1,23 +1,47 @@
 package it.overnet.db;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Studente {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int id;
 	
 	String nome;
 	String cognome;
+	
+	@Temporal(TemporalType.DATE)
 	Date dataNascita;
+	
 	int altezzaInCm;
 	float pesoInKg;
 	int matricola;
+	
+	@ManyToMany(mappedBy="iscritti")
+	List<Corso> pianoDiStudi;
+	
+	public void addCorsoToPianoDiStudi(Corso c) {
+		if (pianoDiStudi == null) {
+			pianoDiStudi = new ArrayList<Corso>();
+		}
+		if (!pianoDiStudi.contains(c)) {
+			pianoDiStudi.add(c);
+			c.addIscritto(this);
+		}
+	}
 	
 	public int getId() {
 		return id;
@@ -60,6 +84,12 @@ public class Studente {
 	}
 	public void setMatricola(int matricola) {
 		this.matricola = matricola;
+	}
+	public List<Corso> getPianoDiStudi() {
+		return pianoDiStudi;
+	}
+	public void setPianoDiStudi(List<Corso> pianoDiStudi) {
+		this.pianoDiStudi = pianoDiStudi;
 	}
 	
 	
