@@ -4,10 +4,14 @@ package it.overnet.db;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Studente {
+	
+	@Id
 	int id;
+	
 	String nome;
 	String cognome;
 	Date dataNascita;
