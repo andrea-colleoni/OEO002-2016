@@ -33,6 +33,10 @@
        		<property name="studenteDao" ref="studenteDao" />
        </bean>             
        
+       <bean name="/studenti.htm" class="it.overnet.app.StudentiJsonController">
+       		<property name="studenteDao" ref="studenteDao" />
+       </bean>    
+              
        <bean name="studenteDao" class="it.overnet.db.StudenteDao" 
        		scope="singleton"/>
        		

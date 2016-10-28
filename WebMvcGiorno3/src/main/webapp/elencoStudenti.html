@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
+ 
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
+  
+</head>
+<body>
+<h1>Elenco studenti</h1>
+<table id="studenti">
+</table>
+<button id="btnRefresh">Refresh</button>
+<script>
+$(function() {
+	refresh();
+	
+	$('#btnRefresh').click(function() {
+		refresh();
+	});
+});
+
+var refresh = function() {
+	$.get('studenti.htm')
+	.done(function(data) {
+		$('#studenti').DataTable({
+			data: data.elenco,
+			destroy: true,
+	        columns: [
+	            { 
+	            	title: "id",
+	            	data: "id"
+	            },
+	            { title: "nome",
+	            	data: "nome"
+	            },
+	            { title: "cognome", data: "cognome" },
+	            { title: "data di nascita", data: "dataNascita" },
+	            { title: "altezza", data: "altezzaInCm" },
+	            { title: "peso", data: "pesoInKg" },
+	            { title: "matricola", data: "matricola" }
+	        ]
+		});		
+	});
+	
+}
+</script>
+</body>
+</html>
