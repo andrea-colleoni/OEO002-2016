@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="WebGiorno1">
+    <wb-module deploy-name="GG1-Web">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <dependent-module archiveName="taglibs-standard-spec-1.2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/Libs/lib/taglibs-standard-spec-1.2.5.jar">
@@ -17,10 +17,10 @@
         <dependent-module archiveName="sqljdbc42.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/Libs/lib/sqljdbc42.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="DatabaseGiono2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/DatabaseGiono2/DatabaseGiono2">
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/GG2-2-Database/GG2-2-Database">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="WebGiorno1"/>
-        <property name="java-output-path" value="/WebGiorno1/build/classes"/>
+        <property name="java-output-path" value="/GG1-Web/build/classes"/>
+        <property name="context-root" value="GG1-Web"/>
     </wb-module>
 </project-modules>

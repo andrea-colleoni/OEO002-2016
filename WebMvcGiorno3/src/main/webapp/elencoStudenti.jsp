@@ -58,7 +58,7 @@
 					</c:forEach>
 				</tbody>
 			</table>
-			<a class="btn btn-default" href="/nuovoStudente.htm" role="button">Nuovo studente</a>
+			<a class="btn btn-primary" href="/nuovoStudente.htm" role="button">Nuovo studente</a>
 		</div>
 	</div>
 	<script

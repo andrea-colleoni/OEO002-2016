@@ -18,7 +18,6 @@
        InversionofControl (Ioc) non sono io controller che ho bisogno di studenteDao, sei tu spring che mi inietti lo studente dao così che quando ne avrò bisogno so già utilizzarlo
         -->
        		<property name="studenteDao" ref="studenteDao" />
-       		<property name="pippo" value="Ciaoooooooo" />
        		
        </bean>
        

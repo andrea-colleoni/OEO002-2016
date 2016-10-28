@@ -4,10 +4,10 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="DatabaseMavenGiorno3-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/DatabaseMavenGiorno3/DatabaseMavenGiorno3">
+        <dependent-module archiveName="DatabaseMavenGiorno3-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/GG3-3-Database/GG3-3-Database">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="WebMvcGiorno3"/>
         <property name="java-output-path" value="/WebMvcGiorno3/target/classes"/>
+        <property name="context-root" value="GG3-3-WebMvc"/>
     </wb-module>
 </project-modules>

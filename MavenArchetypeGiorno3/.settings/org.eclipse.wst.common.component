@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <property name="context-root" value="MavenArchetypeGiorno3"/>
         <property name="java-output-path" value="/MavenArchetypeGiorno3/target/classes"/>
+        <property name="context-root" value="GG3-2-MavenArchetype"/>
     </wb-module>
 </project-modules>

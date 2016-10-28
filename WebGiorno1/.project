@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>WebGiorno1</name>
+	<name>GG1-Web</name>
 	<comment></comment>
 	<projects>
-		<project>DatabaseGiono2</project>
+		<project>GG2-2-Database</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
